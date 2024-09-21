@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fall Collection</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script type="module" src="controller.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img
+        src="logo.png"
+        alt="BONKERS"
+        class="main-navigation__logo"
+        id="logo"
+      />
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#home">HOME</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#shop">SHOP</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">CONTACT</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#shop"
+              >SHOP NOW</a
+            >
+          </li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <button
+          class="main-navigation__menu-btn"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <!-- Side Drawer -->
+      <div class="side-drawer">
+        <button class="close-drawer-btn" id="close-drawer-btn">&times;</button>
+        <ul class="side-drawer__links">
+          <li class="side-drawer__item"><a href="#home">HOME</a></li>
+          <li class="side-drawer__item"><a href="#shop">SHOP</a></li>
+          <li class="side-drawer__item"><a href="#contact">CONTACT</a></li>
+          <li class="side-drawer__item"><a href="#shop">SHOP NOW</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <video class="hero-video" autoplay muted loop>
+        <source src="hero-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay">
+        <h1>
+          <span>Introducing</span> <span>Our</span> <span>Fall</span>
+          <span>Collection</span>
+        </h1>
+        <button class="shop-now">SHOP NOW</button>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="product-grid" id="shop">
+      <!-- PRODUCTS ARE LOADED FROM CONTROLLER JS -->
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <div class="newsletter">
+        <form>
+          <input type="email" placeholder="Your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </footer>
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <p>Item added to cart!</p>
+      </div>
+    </div>
+  </body>
+</html>
